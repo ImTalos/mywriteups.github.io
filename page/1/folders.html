@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <h1>All Folders</h1>
+  <ul>
+    {{ range .Site.Taxonomies.folders.Alphabetical }}
+      <li>
+        <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}
